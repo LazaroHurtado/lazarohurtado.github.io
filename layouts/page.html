@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <article>
+    <header class="page-heading">
+      <a class="back-link" href="{{ "blog/" | relURL }}">&larr; All posts</a>
+      <h1>{{ .Title }}</h1>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+    </header>
+    <div class="content">{{ .Content }}</div>
+  </article>
+{{ end }}

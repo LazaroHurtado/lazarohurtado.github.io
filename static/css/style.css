@@ -1,0 +1,106 @@
+:root {
+  color-scheme: light;
+  --paper: #faf9f6;
+  --ink: #272b29;
+  --muted: #646b65;
+  --line: #dfe2db;
+  --accent: #2d624e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+a { color: var(--accent); text-underline-offset: 0.22em; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+
+.skip-link { position: absolute; top: -5rem; }
+.skip-link:focus { top: 0.5rem; background: var(--paper); }
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.8rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.site-name { color: var(--ink); font-weight: 650; text-decoration: none; }
+nav { display: flex; gap: 1.5rem; font-size: 1rem; }
+nav a { color: var(--muted); text-decoration: none; }
+nav a[aria-current] { color: var(--ink); text-decoration: underline; }
+
+main { min-height: 60vh; padding: 4.5rem 0 1rem; }
+.page-heading { margin-bottom: 2.75rem; }
+.home-intro { display: grid; grid-template-columns: minmax(0, 1fr) 12rem; gap: 2rem; align-items: center; }
+.home-intro blockquote { margin-bottom: 0; }
+.profile-photo { display: block; width: 12rem; max-width: 100%; height: auto; border-radius: 4px; }
+
+h1, h2, h3 {
+  font-weight: 400;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+h1 { margin: 0 0 1.25rem; font-size: clamp(2.5rem, 7vw, 3.75rem); }
+h2 { margin: 2.5rem 0 0.8rem; font-size: 1.75rem; }
+h3 { font-size: 1.35rem; }
+p { margin: 0 0 1.25rem; }
+
+.eyebrow {
+  margin-bottom: 1rem;
+  color: var(--accent);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.lede, .content { color: #484f49; }
+.text-link { display: inline-block; margin-top: 1.25rem; font-weight: 600; }
+.back-link { display: inline-block; margin-bottom: 1.5rem; font-size: 1rem; }
+time { color: var(--muted); font-size: 0.875rem; }
+
+.post-list { margin: 0; padding: 0; list-style: none; }
+.post-list li { padding: 1.75rem 0; border-top: 1px solid var(--line); }
+.post-list h2 { margin: 0.4rem 0 0.65rem; }
+.post-list h2 a { color: var(--ink); text-decoration: none; }
+.post-list h2 a:hover { color: var(--accent); text-decoration: underline; }
+.post-list p { margin: 0; color: var(--muted); }
+
+.content { overflow-wrap: break-word; }
+.content > :first-child { margin-top: 0; }
+.content img { max-width: 100%; height: auto; }
+blockquote { margin: 1.75rem 0; padding-left: 1.25rem; border-left: 2px solid var(--accent); }
+code { font-family: "Share Tech Mono", monospace; font-size: 0.9em; }
+:not(pre) > code { padding: 0.15em 0.3em; background: #eceee8; border-radius: 3px; }
+pre { overflow-x: auto; padding: 1.25rem; border: 1px solid var(--line); border-radius: 5px; line-height: 1.6; }
+table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; }
+th, td { padding: 0.5rem 1rem; border: 1px solid var(--line); }
+.content mjx-container[display="true"] { max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: 0.5rem 0; }
+
+.site-footer {
+  margin-top: 4rem;
+  padding: 1.5rem 0 2rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 40rem) {
+  main { padding-top: 3rem; }
+  .site-header { padding: 1.25rem 0; }
+  .home-intro { grid-template-columns: 1fr; gap: 1.5rem; }
+}

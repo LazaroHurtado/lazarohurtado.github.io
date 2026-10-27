@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <div class="page-heading home-intro">
+    <div>
+      <h1>{{ .Title }}</h1>
+      <div class="content">{{ .Summary }}</div>
+    </div>
+    <img class="profile-photo" src="{{ "images/profile.jpg" | relURL }}" width="761" height="943" alt="Portrait of {{ .Title }}">
+  </div>
+  <div class="content">{{ .ContentWithoutSummary }}</div>
+  <a class="text-link" href="{{ "blog/" | relURL }}">Read the blog <span aria-hidden="true">&rarr;</span></a>
+{{ end }}

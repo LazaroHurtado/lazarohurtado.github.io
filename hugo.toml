@@ -1,0 +1,14 @@
+baseURL = 'https://example.org/'
+locale = 'en-US'
+title = 'Notes & ideas'
+disableKinds = ['taxonomy', 'term', 'RSS', 'sitemap']
+
+[markup.goldmark.extensions.passthrough]
+enable = true
+
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [['$$', '$$'], ['\[', '\]']]
+inline = [['$', '$'], ['\(', '\)']]
+
+[markup.highlight]
+style = 'github'
